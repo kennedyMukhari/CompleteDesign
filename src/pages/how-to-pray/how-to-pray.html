@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>howToPray</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <img src="../../assets/imgs/islam.jpg" />
+    <ion-card-content>
+      <ion-card-title>
+        How to pray:
+      </ion-card-title>
+      <p *ngFor="let prayer of praise">
+        {{prayer.phrase}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

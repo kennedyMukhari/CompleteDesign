@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="text-align: center" item-end>Islamic App<ion-icon style="float: right" name="share"></ion-icon>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div>
+
+    </div>
+    <div class="child1">
+      <div class="timeline">
+        <div class="container right">
+          <label>{{formattedDate}}</label>
+          <label style="color: #506473"> 22 Safar, 1438 AH</label>
+        </div>
+        <div class="container right">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">Dhaka(+6:)
+            <span class="caret"></span></button>
+          <ul class="dropdown-menu">
+            <li><a href="#">Eucla(+8)</a></li>
+            <li><a href="#">Tokyo(+9)</a></li>
+            <li><a href="#">Apia(+9)</a></li>
+          </ul>
+        </div>
+        <div class="container right">
+          <Strong>Notification </Strong>
+          <ion-icon name="notifications"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="child2">
+      <div class="dot">
+        <p style="font-size:15px">Fajr</p>
+        <p style="color: #1df2ad">{{formatTime}}</p>
+        <p style="font-size:15px">-4:50:32</p>
+      </div>
+    </div>
+  </div>
+  <div class="last" padding>
+    <div class="inLast">
+      <ion-list *ngFor="let a of prayers; let i = index" no-lines>
+        <button style="border-radius: 5px;" ion-item color="light" (click)="goToHowToPray(i)">
+          <ion-avatar item-start>
+            <img src="{{a.image}}">
+          </ion-avatar>
+          <div item-start>
+            <h2 style="color: #6e8199;">{{a.name}} </h2>
+            <p style="color: #6e8199;">{{a.subname}}</p>
+          </div>
+        </button>
+      </ion-list>
+    </div>
+  </div>
+</ion-content>
